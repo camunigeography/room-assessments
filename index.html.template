@@ -1,0 +1,14 @@
+<?php
+
+# Settings
+$settings = array (
+	'hostname' => 'localhost',
+	'username' => 'the_username',
+	'password' => 'the_password',
+);
+
+# Load and run the room assessments class
+require_once ('room-assessments/roomAssessments.php');
+new roomAssessments ($settings);
+
+?>

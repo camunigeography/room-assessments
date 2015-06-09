@@ -1,0 +1,25 @@
+# Apache httpd.conf extract providing URL routing and other directives
+
+#   Example usage in httpd.conf:
+#   
+#   # Room risk assessments
+#   Include /path/to/room-assessments/.httpd.conf.extract.txt
+#   Use MacroRoomAssessments "/safety/roomassessments" "/path/to/room-assessments/:/path/to/php/libraries/"
+
+
+<Macro MacroRoomAssessments $applicationBaseUrl $includePath>
+	
+	<Location $applicationBaseUrl>
+		php_value include_path "$includePath"
+	</Location>
+	
+	Use MacroFrontControllerApplication "$applicationBaseUrl/" "Room risk assessments"
+	
+	# Application directives
+	RewriteRule ^$applicationBaseUrl/download/$ $applicationBaseUrl/index.html?action=download [L,QSA]
+	RedirectMatch permanent ^$applicationBaseUrl/download$ $applicationBaseUrl/download/
+	
+	# Export
+	RewriteRule ^$applicationBaseUrl/download/roomassessments.csv$ $applicationBaseUrl/index.html?action=downloadcsv [L,QSA]
+	
+</Macro>
