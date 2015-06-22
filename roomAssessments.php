@@ -71,6 +71,7 @@ class roomAssessments extends frontControllerApplication
 			CREATE TABLE IF NOT EXISTS `roomassessments` (
 			  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Automatic key' PRIMARY KEY,
 			  `room` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+			  `building` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
 			  `function` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
 			  `occupiers` text COLLATE utf8_unicode_ci NOT NULL,
 			  `tidy` enum('','Yes','No') COLLATE utf8_unicode_ci NOT NULL,
@@ -172,8 +173,12 @@ class roomAssessments extends frontControllerApplication
 			<table class="lines">
 				<tbody>
 					<tr>
-						<td>Room number and location:</td>
+						<td>Room number:</td>
 						<td>{room}</td>
+					</tr>
+					<tr>
+						<td>Building:</td>
+						<td>{building}</td>
 					</tr>
 					<tr>
 						<td>Room function:</td>
