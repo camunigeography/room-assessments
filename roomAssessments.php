@@ -201,42 +201,42 @@ class roomAssessments extends frontControllerApplication
 					<tr>
 						<td>Is the room tidy and free from trip and fire hazards? E.g. trailing cables or piles of flammable papers?</td>
 						<td>{tidy}</td>
-						<td>{tidyDetails}</td>
+						<td>{tidyInfo}</td>
 					</tr>
 					<tr>
 						<td>Is a fire escape direction sign in view outside the room?</td>
 						<td>{fireEscapeSign}</td>
-						<td>{fireEscapeSignDetails}</td>
+						<td>{fireEscapeSignInfo}</td>
 					</tr>
 					<tr>
 						<td>Has a display screen self assessment checklist been completed recently by the occupier/s?</td>
 						<td>{vdu}</td>
-						<td>{vduDetails}</td>
+						<td>{vduInfo}</td>
 					</tr>
 					<tr>
 						<td>Do room occupants need special considerations? E.g. Expectant mothers, partially sighted or hearing impairment.</td>
 						<td>{specialConsiderations}</td>
-						<td>{specialConsiderationsDetails}</td>
+						<td>{specialConsiderationsInfo}</td>
 					</tr>
 					<tr>
 						<td>Are there any items stored on high shelves and, if needed, do you have access to a stool or ladder?</td>
 						<td>{highShelves}</td>
-						<td>{highShelvesDetails}</td>
+						<td>{highShelvesInfo}</td>
 					</tr>
 					<tr>
 						<td>Are all shelves securely fixed to the brackets?</td>
 						<td>{shelvesFixed}</td>
-						<td>{shelvesFixedDetails}</td>
+						<td>{shelvesFixedInfo}</td>
 					</tr>
 					<tr>
 						<td>Do you consider that the furniture you are using is suitable? Please comment on how it could be improved.</td>
 						<td>{furniture}</td>
-						<td>{furnitureDetails}</td>
+						<td>{furnitureInfo}</td>
 					</tr>
 					<tr>
 						<td>Do occupants have any additional requirements such as workwear or PPE?</td>
 						<td>{ppe}</td>
-						<td>{ppeDetails}</td>
+						<td>{ppeInfo}</td>
 					</tr>
 					<tr>
 						<td>Please list chemicals stored in this room with a hazard label e.g. Tippex, plant food, cleaning solvents.</td>
