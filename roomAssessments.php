@@ -63,44 +63,44 @@ class roomAssessments extends frontControllerApplication
 	{
 		return "
 			CREATE TABLE IF NOT EXISTS `administrators` (
-			  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Username' PRIMARY KEY,
-			  `active` enum('','Yes','No') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Yes' COMMENT 'Currently active?',
-			  `privilege` enum('Administrator','Restricted administrator') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'Administrator' COMMENT 'Administrator level'
-			) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='System administrators';
+			  `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Username' PRIMARY KEY,
+			  `active` enum('','Yes','No') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Yes' COMMENT 'Currently active?',
+			  `privilege` enum('Administrator','Restricted administrator') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'Administrator' COMMENT 'Administrator level'
+			) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8mb4_unicode_ci COMMENT='System administrators';
 			
 			CREATE TABLE IF NOT EXISTS `roomassessments` (
 			  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Automatic key' PRIMARY KEY,
-			  `room` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-			  `building` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-			  `function` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-			  `occupiers` text COLLATE utf8_unicode_ci NOT NULL,
-			  `tidy` enum('','Yes','No') COLLATE utf8_unicode_ci NOT NULL,
-			  `tidyDetails` text COLLATE utf8_unicode_ci,
-			  `fireEscapeSign` enum('','Yes','No') COLLATE utf8_unicode_ci NOT NULL,
-			  `fireEscapeSignDetails` text COLLATE utf8_unicode_ci,
-			  `vdu` enum('','Yes','No','Not sure') COLLATE utf8_unicode_ci NOT NULL,
-			  `vduDetails` text COLLATE utf8_unicode_ci,
-			  `specialConsiderations` enum('','Yes','No') COLLATE utf8_unicode_ci NOT NULL,
-			  `specialConsiderationsDetails` text COLLATE utf8_unicode_ci,
-			  `highShelves` enum('','Yes','No') COLLATE utf8_unicode_ci NOT NULL,
-			  `highShelvesDetails` text COLLATE utf8_unicode_ci,
-			  `shelvesFixed` enum('','Yes','No') COLLATE utf8_unicode_ci NOT NULL,
-			  `shelvesFixedDetails` text COLLATE utf8_unicode_ci,
-			  `furniture` enum('','Yes','No') COLLATE utf8_unicode_ci NOT NULL,
-			  `furnitureDetails` text COLLATE utf8_unicode_ci,
-			  `ppe` enum('','Yes','No') COLLATE utf8_unicode_ci NOT NULL,
-			  `ppeDetails` text COLLATE utf8_unicode_ci,
-			  `chemicals` text COLLATE utf8_unicode_ci,
-			  `comments` text COLLATE utf8_unicode_ci,
-			  `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-			  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+			  `room` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+			  `building` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+			  `function` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+			  `occupiers` text COLLATE utf8mb4_unicode_ci NOT NULL,
+			  `tidy` enum('','Yes','No') COLLATE utf8mb4_unicode_ci NOT NULL,
+			  `tidyDetails` text COLLATE utf8mb4_unicode_ci,
+			  `fireEscapeSign` enum('','Yes','No') COLLATE utf8mb4_unicode_ci NOT NULL,
+			  `fireEscapeSignDetails` text COLLATE utf8mb4_unicode_ci,
+			  `vdu` enum('','Yes','No','Not sure') COLLATE utf8mb4_unicode_ci NOT NULL,
+			  `vduDetails` text COLLATE utf8mb4_unicode_ci,
+			  `specialConsiderations` enum('','Yes','No') COLLATE utf8mb4_unicode_ci NOT NULL,
+			  `specialConsiderationsDetails` text COLLATE utf8mb4_unicode_ci,
+			  `highShelves` enum('','Yes','No') COLLATE utf8mb4_unicode_ci NOT NULL,
+			  `highShelvesDetails` text COLLATE utf8mb4_unicode_ci,
+			  `shelvesFixed` enum('','Yes','No') COLLATE utf8mb4_unicode_ci NOT NULL,
+			  `shelvesFixedDetails` text COLLATE utf8mb4_unicode_ci,
+			  `furniture` enum('','Yes','No') COLLATE utf8mb4_unicode_ci NOT NULL,
+			  `furnitureDetails` text COLLATE utf8mb4_unicode_ci,
+			  `ppe` enum('','Yes','No') COLLATE utf8mb4_unicode_ci NOT NULL,
+			  `ppeDetails` text COLLATE utf8mb4_unicode_ci,
+			  `chemicals` text COLLATE utf8mb4_unicode_ci,
+			  `comments` text COLLATE utf8mb4_unicode_ci,
+			  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+			  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
 			  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT 'Automatic timestamp'
-			) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Table of room assessments';
+			) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8mb4_unicode_ci COMMENT='Table of room assessments';
 			
 			CREATE TABLE IF NOT EXISTS `settings` (
 			  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Automatic key (ignored)' PRIMARY KEY ,
-			  `recipientEmail` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'recipient@example.com' COMMENT 'Recipient email'
-			) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='Settings';
+			  `recipientEmail` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'recipient@example.com' COMMENT 'Recipient email'
+			) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8mb4_unicode_ci COMMENT='Settings';
 		";
 	}
 	
