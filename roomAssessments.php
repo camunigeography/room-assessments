@@ -15,6 +15,7 @@ class roomAssessments extends frontControllerApplication
 		$defaults = array (
 			'applicationName' => 'Room risk assessments',
 			'div' => strtolower (__CLASS__),
+			'tabUlClass' => 'tabsflat',
 			'database' => 'roomassessments',
 			'table' => 'roomassessments',
 			'useCamUniLookup' => true,
