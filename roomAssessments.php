@@ -13,7 +13,7 @@ class roomAssessments extends frontControllerApplication
 	{
 		# Specify available arguments as defaults or as NULL (to represent a required argument)
 		$defaults = array (
-			'applicationName' => 'Room risk assessments',
+			'applicationName' => 'Room risk assessment online reporting',
 			'div' => strtolower (__CLASS__),
 			'tabUlClass' => 'tabsflat',
 			'database' => 'roomassessments',
