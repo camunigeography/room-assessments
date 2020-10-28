@@ -146,7 +146,7 @@ class roomAssessments extends frontControllerApplication
 				'email' => array ('default' => $email, 'editable' => false, ),
 			),
 		));
-		$form->setOutputEmail ($this->settings['recipientEmail'], $this->administratorEmail, 'Room risk assessment for room {room}', NULL, 'email');
+		$form->setOutputEmail ($this->settings['recipientEmail'], $this->settings['administratorEmail'], 'Room risk assessment for room {room}', NULL, 'email');
 		$form->setOutputConfirmationEmail ('email', $this->administratorEmail, 'Room risk assessment for room {room}', false);
 		$form->setOutputScreen ();
 		if ($result = $form->process ($html)) {
