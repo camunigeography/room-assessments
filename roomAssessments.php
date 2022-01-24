@@ -119,11 +119,6 @@ class roomAssessments extends frontControllerApplication
 		# Start the HTML
 		$html = '';
 		
-		# Get the user's name and e-mail
-		#!# Fix these to use the internal database and a configurable e-mail
-		$name = ($this->settings['useCamUniLookup'] && ($userLookupData = camUniData::getLookupData ($this->user)) ? $userLookupData['name'] : false);
-		$email = $this->user . '@' . $this->settings['emailDomain'];
-		
 		# Create a new form
 		$form = new form (array (
 			'div' => false,
@@ -142,8 +137,8 @@ class roomAssessments extends frontControllerApplication
 			'table' => $this->settings['table'],
 			'intelligence' => true,
 			'attributes' => array (
-				'name' => array ('default' => $name, 'editable' => (!$name), ),
-				'email' => array ('default' => $email, 'editable' => false, ),
+				'name' => array ('default' => $this->userName, 'editable' => (!$this->userName), ),
+				'email' => array ('default' => $this->userEmail, 'editable' => false, ),
 			),
 		));
 		$form->setOutputEmail ($this->settings['recipientEmail'], $this->settings['administratorEmail'], 'Room risk assessment for room {room}', NULL, 'email');
